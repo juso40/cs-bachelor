@@ -5,7 +5,8 @@ double root_iterative(double q, int n, int steps){
   double guess_nxt;
   double guess=1;
 
-  while(steps>0){
+  while(steps>0)
+  {
     guess_nxt = guess+(1.0/n)*(q/(pow(guess,n-1))-guess);
     guess=guess_nxt;
     steps--;
