@@ -13,30 +13,29 @@ int case_parse_int(std::string number){
       numberascii=numberascii+temp*pow(10,number.size()-i-1);
       break;
       case '+':
-      temp=temp-'0';
-      numberascii=numberascii+temp*pow(10,number.size()-i);
+      temp=temp-'+';
       break;
+      numberascii=numberascii+temp*pow(10,number.size()-i);
       case '-':
       temp=temp-'-';
       numberascii=numberascii+temp*pow(10,number.size()-i-1);
-      numberascii=numberascii*-1;
       break;
       case '0':
       case '1':
       case '2':
       case '3':
       case '4':
-      case '5':
-      case '6':
+      case '5'://if ts any number then in skips trough all cases till 9
+      case '6': //and then calculates
       case '7':
       case '8':
       case '9':
       temp=temp-'0';
       numberascii=numberascii+temp*pow(10,number.size()-i-1);
       break;
-      default:
-      numberascii=numberascii/pow(10,number.size()-i);
-      i=number.size();
+      default://if its neither a number, nor a whitespace or a '+' or '-'
+      numberascii=numberascii/pow(10,number.size()-i);//then it stops
+      i=number.size();//stop condition
     }
   }
   std::cout<<"Number original: "<<number<<std::endl;//just to test the correct output of the original and new string/int
