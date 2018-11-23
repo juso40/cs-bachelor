@@ -15,9 +15,11 @@ int case_parse_int(std::string number){
       case '+':
       temp=temp-'0';
       numberascii=numberascii+temp*pow(10,number.size()-i);
+      break;
       case '-':
       temp=temp-'-';
-      numberascii=numberascii+temp*-pow(10,number.size()-i-1);
+      numberascii=numberascii+temp*pow(10,number.size()-i-1);
+      numberascii=numberascii*-1;
       break;
       case '0':
       case '1':
