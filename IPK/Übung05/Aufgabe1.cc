@@ -53,6 +53,7 @@ void minmax(std::vector<double> V){
 			min=V[n];
 		}
 		if (V[n]>max){
+			max=V[n];
 		}
 	}
 	std::pair<double,double> pairmm = std::make_pair(min,max);

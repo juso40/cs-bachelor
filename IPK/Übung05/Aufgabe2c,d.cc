@@ -6,7 +6,7 @@ int case_parse_int(std::string number){
   char temp;
   char cancelid;
   int numberascii=0;
-  int negative=1;
+  bool negative=false;
   for (int i=0; i<number.size(); i++){
     temp=number[i];
     switch (temp){
@@ -15,7 +15,7 @@ int case_parse_int(std::string number){
       case '+':
         break;
       case '-':
-        negative=-1;
+        negative=true;
         break;
       case '0':
       case '1':
@@ -30,12 +30,13 @@ int case_parse_int(std::string number){
         numberascii=numberascii*10+(temp-'0');
         break;
       default://if its neither a number, nor a whitespace or a '+' or '-'
-        cancelid=number[i];
+        cancelid=i;
+        //cancelid=number[i];
         i=number.size();//stop condition
     }
   }
-  if (negative==-1){
-    numberascii=negative*numberascii;
+  if (negative==true){
+    numberascii=-numberascii;
   }
   std::cout<<"Number original: "<<number<<std::endl;//just to test the correct output of the original and new string/int
   std::cout<<"Number after ascii: "<<numberascii<<std::endl;
