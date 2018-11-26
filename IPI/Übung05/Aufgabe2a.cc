@@ -5,7 +5,7 @@ double determinante(double a, float b, float c, float d){
   a=a*d-b*c;
   return a;
 }
-//double has more than 2x the digit percision of a float
+//double has more than 2x the digit precision of a float
 int main(){
   print(determinante(100,0.01,-0.01,100));
 }

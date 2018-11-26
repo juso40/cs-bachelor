@@ -3,7 +3,7 @@
 
 int main(){
   int n;
-std::cout<<"Enter a value for n:"<<std::flush;
+  std::cout<<"Enter a value for n:"<<std::flush;
   std::cin>>n;
   float a=pow(10,n);
   float b=pow(-10,n);
