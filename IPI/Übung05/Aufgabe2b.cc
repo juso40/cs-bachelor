@@ -12,6 +12,6 @@ int main()
   std::cout.precision(16);
   std::cout<<"a="<<a<<" b="<<b<<" c="<<c<<std::endl;
   std::cout<<"(a+b)+c="<<(a+b)+c<<std::endl;//(a+b)=0 everytime -> outputs unrounded c
-  std::cout<<"a+(b+c)="<<a+(b+c)<<std::endl;//(b+c) outputs b, because of too litle digit precision of a float
+  std::cout<<"a+(b+c)="<<a+(b+c)<<std::endl;//(b+c)=b, because of too litle digit precision of a float
   //-> (b+c)=b -> a+b=0
 }
