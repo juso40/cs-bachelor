@@ -15,3 +15,10 @@ int main()
   std::cout<<"a+(b+c)="<<a+(b+c)<<std::endl;//(b+c)=b, because of too litle digit precision of a float
   //-> (b+c)=b -> a+b=0
 }
+//Bei der Rechnung (a+b)+c wird zuerst a+b berechnet, was gleich null ist.
+//Daraus folgt, dass das Ergebnis c ist.
+
+//Wenn a+(b+c) berechnet wird wird zuerst b+c berechnet.
+//Da der float Datentyp eine relativ kleine Gleitkommagenauigkeit hat
+//ist die das Ergebnis der Rechnung (b+c) das gleiche wie nur b, wegen rundungsfehler.
+//Daraus folgt a+(b+c)=a+b=0 ab n=4.
