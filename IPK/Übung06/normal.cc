@@ -1,6 +1,9 @@
 #include <iostream>
 #include <vector>
 #include "io.hh"
+#include "io.cc"
+#include "statistics.hh"
+#include "statistics.cc"
 
 int main(){
 	int N;
@@ -15,4 +18,5 @@ int main(){
 	for (auto i:v){
 		std::cout<<i<<"\n";
 	}
+	std::cout<<"Deviation:"<<standard_deviation(v)<<std::endl;
 }

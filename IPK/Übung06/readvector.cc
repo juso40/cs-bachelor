@@ -10,5 +10,5 @@ int main(){
 	for (auto i:rv){
 		std::cout<<i<<std::endl;
 	}
-	std::cout<<"Median"<<median(rv)<<std::endl;
+	std::cout<<"Median:"<<median(rv)<<std::endl;
 }
