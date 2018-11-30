@@ -35,5 +35,5 @@ double standard_deviation(const std::vector<double>& v){
     s=((s+sqrt(pow((v[i]-v[i+1]),2))));
     n++;
   }
-  return s/n;
+  return (s/n);
 }
