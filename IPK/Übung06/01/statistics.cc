@@ -25,7 +25,12 @@ double median(const std::vector<double>& v){
 }
 
 double moment(const std::vector<double>& v, int k){
+  double mment=0;
+  for (int i=0; i<v.size(); i++){
+    mment=mment+pow(v[i],k);
+  }
 
+  return mment/v.size();
 }
 
 double standard_deviation(const std::vector<double>& v){
