@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/justin/C++/IPK/Übung06/02/io.hh
+vector
+-
+
+/home/justin/C++/IPK/Übung06/02/uniform.cc
+iostream
+-
+vector
+-
+io.hh
+/home/justin/C++/IPK/Übung06/02/io.hh
+

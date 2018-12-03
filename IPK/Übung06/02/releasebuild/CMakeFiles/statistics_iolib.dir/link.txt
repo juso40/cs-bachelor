@@ -1,0 +1,2 @@
+/usr/bin/ar qc libstatistics_iolib.a  CMakeFiles/statistics_iolib.dir/io.cc.o CMakeFiles/statistics_iolib.dir/statistics.cc.o
+/usr/bin/ranlib libstatistics_iolib.a

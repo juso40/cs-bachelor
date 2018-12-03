@@ -1,0 +1,33 @@
+Start testing: Dec 03 13:56 CET
+----------------------------------------------------------
+1/2 Testing: demo1
+1/2 Test: demo1
+Command: "/home/justin/C++/IPK/Übung06/02/build/test_mean"
+Directory: /home/justin/C++/IPK/Übung06/02/build
+"demo1" start time: Dec 03 13:56 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"demo1" end time: Dec 03 13:56 CET
+"demo1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/2 Testing: demo2
+2/2 Test: demo2
+Command: "/home/justin/C++/IPK/Übung06/02/build/test_median"
+Directory: /home/justin/C++/IPK/Übung06/02/build
+"demo2" start time: Dec 03 13:56 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"demo2" end time: Dec 03 13:56 CET
+"demo2" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Dec 03 13:56 CET

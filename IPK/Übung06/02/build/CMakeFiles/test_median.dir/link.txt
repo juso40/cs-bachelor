@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/test_median.dir/test_median.cc.o  -o test_median libstatistics_iolib.a 

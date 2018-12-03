@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/justin/C++/IPK/Übung06/02/statistics.cc
+vector
+-
+algorithm
+-
+cmath
+-
+statistics.hh
+/home/justin/C++/IPK/Übung06/02/statistics.hh
+
+/home/justin/C++/IPK/Übung06/02/statistics.hh
+algorithm
+-
+vector
+-
+cmath
+-
+
+/home/justin/C++/IPK/Übung06/02/test_median.cc
+cmath
+-
+vector
+-
+statistics.hh
+/home/justin/C++/IPK/Übung06/02/statistics.hh
+statistics.cc
+/home/justin/C++/IPK/Übung06/02/statistics.cc
+

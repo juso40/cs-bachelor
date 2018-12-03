@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/test_mean.dir/test_mean.cc.o  -o test_mean libstatistics_iolib.a 
