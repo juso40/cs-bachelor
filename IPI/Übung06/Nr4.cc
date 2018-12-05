@@ -4,7 +4,7 @@
 
 bool deck_check(int deck_shuffled[], int n){
   for (unsigned i=0;i<n;i++){
-    if (i!=deck_shuffled[i]){
+    if (deck_shuffled[i]!=i){
       std::cout<<"False!\n\n\n"<<std::endl;
       return false;
     }
@@ -23,7 +23,7 @@ void perfect_out(int deck[], int n){
 
   int steps=0;
   while (true){
-    for (int counter=0;counter<n/2;counter++){
+    for (int counter=0;counter<n/2;++counter){
       deck[(counter*2)]=half1[counter];
       deck[((counter*2)+1)]=half2[counter];
 
@@ -31,10 +31,10 @@ void perfect_out(int deck[], int n){
       half2[counter]=deck[((n/2)+counter)];
 
     }
-    for (int out=0; out<n; out++){
+    for (int out=0; out<n; ++out){
         std::cout<<"perfect-out: "<<deck[out]<<"| card number: "<<out<<std::endl;
     }
-    steps++;
+    ++steps;
     //break condition
     if (deck_check(deck, n)==true){
       break;
@@ -47,7 +47,7 @@ int main(){
   int n=4;
   int deck[n];
 
-  for (unsigned i=0;i<n;i++){
+  for (unsigned i=0;i<n;++i){
     deck[i]=i;
   }
   perfect_out(deck, n);
