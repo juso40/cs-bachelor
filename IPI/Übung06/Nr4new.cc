@@ -65,10 +65,9 @@ int main(){
       deck[i*2]=half2[i];
     }
     //optional, just for visuals
-    //stops working after uncommenting the lower part for some reason :(
-    //for (int i=0; i<n; i++){
-    //  std::cout<<i<<". card is: "<<deck[i]<<"\n";
-    //}
+    for (int i=0; i<n; i++){
+      std::cout<<i<<". card is: "<<deck[i]<<"\n";
+    }
     first_shuffle=false;
     counter++;//counts number of shuffles
   }
