@@ -1,6 +1,0 @@
-a)
-v=n;
-B(v)=n>0
-H(v)=int t=a+b; a=b; b=t; n--;
-
-b)
