@@ -1,0 +1,5 @@
+/home/justin/C++/IPK/Übung08/Nr2/cMake/build/CMakeFiles/rebuild_cache.dir
+/home/justin/C++/IPK/Übung08/Nr2/cMake/build/CMakeFiles/test.dir
+/home/justin/C++/IPK/Übung08/Nr2/cMake/build/CMakeFiles/statistics_iolib.dir
+/home/justin/C++/IPK/Übung08/Nr2/cMake/build/CMakeFiles/edit_cache.dir
+/home/justin/C++/IPK/Übung08/Nr2/cMake/build/CMakeFiles/driver.dir

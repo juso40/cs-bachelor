@@ -5,7 +5,6 @@
 #include <algorithm>
 #include <iterator>
 
-#include "io.cc"
 #include "io.hh"
 #include "statistics.hh"
 
@@ -33,7 +32,7 @@ int main()
   std::list<float> float_list;
   std::copy(vec.begin(),vec.end(),std::back_inserter(float_list));
   print_statistics(float_list);
-  
+
 
   return 0;
 }

@@ -25,14 +25,14 @@ int main()
   print_statistics(vec);
 
   std::array<int,6> int_array = {1,2,3,4,5,6};
-  //print_statistics(int_array);
+  print_statistics(int_array);
 
   // only enable the following block for task c)
-  /*
+
   std::list<float> float_list;
   std::copy(vec.begin(),vec.end(),std::back_inserter(float_list));
   print_statistics(float_list);
-  */
+
 
   return 0;
 }

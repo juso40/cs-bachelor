@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/justin/C++/IPK/Übung08/Nr2/cMake/io.cc
+iostream
+-
+string
+-
+random
+-
+io.hh
+/home/justin/C++/IPK/Übung08/Nr2/cMake/io.hh
+
+/home/justin/C++/IPK/Übung08/Nr2/cMake/io.hh
+vector
+-
+

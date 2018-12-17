@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/justin/C++/IPK/Übung08/Nr2/cMake/io.hh
+vector
+-
+
+/home/justin/C++/IPK/Übung08/Nr2/cMake/statistics.hh
+array
+-
+vector
+-
+algorithm
+-
+iostream
+-
+cmath
+-
+
+/home/justin/C++/IPK/Übung08/Nr2/cMake/statisticsdriver.cc
+iostream
+-
+array
+-
+list
+-
+vector
+-
+algorithm
+-
+iterator
+-
+io.hh
+/home/justin/C++/IPK/Übung08/Nr2/cMake/io.hh
+statistics.hh
+/home/justin/C++/IPK/Übung08/Nr2/cMake/statistics.hh
+
