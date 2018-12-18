@@ -180,6 +180,8 @@ int main(int argc, char** argv) {
      linear.count+=cycle.count;
    //uebergebe die lineare liste, da an der der zyklus angebunden ist
      hase_und_igel(linear);
+//loesche alle meine pointer, damit keine leaks entstehen
+     deletelists(linear);
  }
 //leere Liste
  if (n==0 && k==0)
@@ -198,6 +200,8 @@ int main(int argc, char** argv) {
     //  std::cout<<"linear: "<<i<<" | "<<linear.first<<"\n";
     }
    hase_und_igel(linear);
+//loesche alle meine pointer, damit keine leaks entstehen
+   deletelists(linear);
  }
 
 //echter zyklus
@@ -216,12 +220,14 @@ int main(int argc, char** argv) {
     //verbinde mein ende mitdem anfang des zyklus
    element->next=cycle.first;
    hase_und_igel(cycle);
+   //loesche alle meine pointer, damit keine leaks entstehen
+   deletelists(cycle);
  }
 
 
-//loesche alle meine pointer, damit keine leaks entstehen
-//fuehrt zu einer endlosschleife warum auch immer
 
-  deletelists(linear);
-  deletelists(cycle);
+
+
+
+
 }
