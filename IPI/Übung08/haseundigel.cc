@@ -108,8 +108,6 @@ void hase_und_igel(IntList liste)
   //zykelstart dient als vergleichspunkt im Zyklus
   zykelstart=igel;
   zykelstart->next=igel->next;
-  igel=igel->next;
-  count++;
   //igel läuft den zyklus so lange ab, bis er den vergleichspunkt erreicht hat.
   //der zyklus kann jedoch nicht länger als die länge der gesamten list sein
   //nur zur sicherheit
@@ -117,18 +115,17 @@ void hase_und_igel(IntList liste)
   {
     for (int i=0; i<liste.count; ++i)
     {
+      igel=igel->next;
+      count++;
       if(igel==zykelstart)
       {
         break;
       }
-      igel=igel->next;
-      count++;
     }
   }
   //berechnung der zykellänge
   std::cout<<"Zyklischer Teil: "<<count;
   std::cout<<"\nLinearer Teil: "<<liste.count-count;
-  std::cout<<"\nGesamte Länge: "<<liste.count;
 }
 
 int main(int argc, char** argv) {
@@ -139,65 +136,92 @@ int main(int argc, char** argv) {
  std::cout<<"Zykelteil n: "<<std::flush;
  std::cin>>n;
 
- if (k==0 || n==0)
- {
-   std::cout<<"Netter Versuch, die Aufgabe war es eine zyklsche Liste zu erstellen mit einem linearn Teil. Demnach ist 0 eine verbotene länge für die Liste."<<std::endl;
-    return 0;
- }
-
- IntListElem* element;
-//initialisiere meinen linearen teil
+  IntListElem* element;
+  //initialisiere meinen linearen teil
   IntList linear;
   empty_list(&linear);
-
-//erstelle meinen linearen teil
-  for (int i=0; i<k; ++i){
-    element = new IntListElem;
-    insert_in_list(&linear, 0, element);
-  //  std::cout<<"linear: "<<i<<" | "<<linear.first<<"\n";
-  }
-
 
   //initialisiere meinen zyklischen teil
   IntList cycle;
   empty_list(&cycle);
-//erstelle meinen zyklus
-  for (int i=0; i<n; ++i){
-    element = new IntListElem;
-    insert_in_list(&cycle, 0, element);
-  }
-//laufe meinen zyklus bis zum ende ab
-  while(element->next!=0)
-  {
-    element=element->next;
-  }
- //verbinde mein ende mitdem anfang des zyklus
-  element->next=cycle.first;
-//laufe meinen linearen teil bis zum ende ab
-  element=linear.first;
-  while(element->next!=0)
-  {
-    element=element->next;
-  }
-//verbinde das ende meines linearen teils mit dem anfang des zyklus
-  element->next=cycle.first;
-  element=linear.first;
 
-//keine ahnung was das hier gemacht hat, schient auch ohne zu funktionieren
-//falls das programm warum auch immer nicht mehr funktionieren sollte einfach auskommentieren
-//¯\_(ツ)_/¯
-//war glaube nur für tests
-//  for(int i=0; i<10;i++)
-//  {
-//    element=element->next;
-//  }
+//normalfall
+ if (n!=0 && k!=0)
+ {
+   //erstelle meinen linearen teil
+     for (int i=0; i<k; ++i){
+       element = new IntListElem;
+       insert_in_list(&linear, 0, element);
+     //  std::cout<<"linear: "<<i<<" | "<<linear.first<<"\n";
+     }
+   //erstelle meinen zyklus
+     for (int i=0; i<n; ++i){
+       element = new IntListElem;
+       insert_in_list(&cycle, 0, element);
+     }
+   //laufe meinen zyklus bis zum ende ab
+     while(element->next!=0)
+     {
+       element=element->next;
+     }
+    //verbinde mein ende mitdem anfang des zyklus
+     element->next=cycle.first;
+   //laufe meinen linearen teil bis zum ende ab
+     element=linear.first;
+     while(element->next!=0)
+     {
+       element=element->next;
+     }
+   //verbinde das ende meines linearen teils mit dem anfang des zyklus
+     element->next=cycle.first;
+     element=linear.first;
 
-//meine verknuepfte list ehat die laenge beider listen addiert
-  linear.count+=cycle.count;
-//uebergebe die lineare liste, da an der der zyklus angebunden ist
-  hase_und_igel(linear);
+   //meine verknuepfte list ehat die laenge beider listen addiert
+     linear.count+=cycle.count;
+   //uebergebe die lineare liste, da an der der zyklus angebunden ist
+     hase_und_igel(linear);
+ }
+//leere Liste
+ if (n==0 && k==0)
+ {
+   std::cout<<"Keine Liste vorhanden, beende das Programm!"<<std::endl;
+   return 0;
+ }
+
+//echte lineare liste
+ if (n==0 && k!=0)
+ {
+   //erstelle meinen linearen teil
+    for (int i=0; i<k; ++i){
+     element = new IntListElem;
+     insert_in_list(&linear, 0, element);
+    //  std::cout<<"linear: "<<i<<" | "<<linear.first<<"\n";
+    }
+   hase_und_igel(linear);
+ }
+
+//echter zyklus
+ if (k==0 && n!=0)
+ {
+   //erstelle meinen zyklus
+   for (int i=0; i<n; ++i){
+     element = new IntListElem;
+     insert_in_list(&cycle, 0, element);
+   }
+   //laufe meinen zyklus bis zum ende ab
+   while(element->next!=0)
+   {
+     element=element->next;
+   }
+    //verbinde mein ende mitdem anfang des zyklus
+   element->next=cycle.first;
+   hase_und_igel(cycle);
+ }
+
 
 //loesche alle meine pointer, damit keine leaks entstehen
-  deletelists(cycle);
+//fuehrt zu einer endlosschleife warum auch immer
+
   deletelists(linear);
+  deletelists(cycle);
 }
