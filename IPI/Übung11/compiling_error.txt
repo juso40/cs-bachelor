@@ -1,0 +1,12 @@
+/home/justin/C++/IPI/Übung11/main.cc:35:1: error: expected ‘}’ at end of input
+ }
+ ^
+In file included from /home/justin/C++/IPI/Übung11/main.cc:2:0:
+/home/justin/C++/IPI/Übung11/array.hh: In member function ‘datenform Vector<datenform, laenge>::getMax()’:
+/home/justin/C++/IPI/Übung11/array.hh:64:5: error: expected ‘,’ or ‘;’ before ‘return’
+     return max;
+     ^~~~~~
+/home/justin/C++/IPI/Übung11/main.cc: At global scope:
+/home/justin/C++/IPI/Übung11/main.cc:35:1: error: expected ‘;’ at end of input
+ }
+ ^
