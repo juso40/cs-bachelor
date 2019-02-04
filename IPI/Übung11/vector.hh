@@ -17,16 +17,6 @@ public:
     _vector = v;
     _laenge = laenge;
   }
-  //der wird nie benutzt!!!!
-/*  Vector(const Vector<datenform, laenge>& other)  //Copy-Konstruktor
-  {
-    _vector[other._laenge];
-    _laenge=other._laenge;
-    for(int i=0;i<laenge;i++)
-    {
-      _vector[i]=other._vector[i];
-    }
-  }*/
   ~Vector()        //Destrukor
   {
     //Nothing to do here
