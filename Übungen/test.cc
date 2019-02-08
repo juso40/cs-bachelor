@@ -7,6 +7,7 @@
 void fhandler(std::string title){
   std::string line;
   std::ifstream myfile;
+  std::ofstream newfile ("output.txt");
   myfile.open(title);
 
   if(myfile.is_open()){
@@ -17,6 +18,7 @@ void fhandler(std::string title){
       std::replace(line.begin(), line.end(), 'o', 'e' );
       std::replace(line.begin(), line.end(), 'u', 'e' );
       std::cout<<line<<std::endl;
+      newfile<<line<<std::endl;;
     }
   }
   else{
