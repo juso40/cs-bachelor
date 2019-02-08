@@ -13,7 +13,6 @@ class Hund : public Tier{
 private:
   std::string food_v = "Fleisch";
   std::string sound_v = "woof!";
-
 public:
   Hund(){}
   ~Hund(){}
@@ -27,8 +26,24 @@ public:
   }
 };
 
+class Baer :public Tier{
+private:
+
+public:
+  void food(){
+    std::cout<<"Lachs"<<std::endl;
+  }
+  void sound(){
+    std::cout<<"Wraaahhh"<<std::endl;
+  }
+};
+
  int main()
  {
    Hund Felix;
+   Baer Jonathan;
    Felix.food();
+   Felix.sound();
+   Jonathan.food();
+   Jonathan.sound();
  }
